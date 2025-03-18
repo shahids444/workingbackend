@@ -25,7 +25,7 @@ const app = express();
 app.use(cookieParser()); // Enable reading cookies
 app.use(express.json());
 app.use(cors({
-    origin: "https://complete-delta.vercel.app/", 
+    origin: "https://complete-delta.vercel.app", 
     credentials: true, 
     allowedHeaders: ["Content-Type", "Authorization"],
     methods: ["GET", "POST", "PUT", "DELETE"],
