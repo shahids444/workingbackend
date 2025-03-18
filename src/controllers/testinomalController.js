@@ -46,11 +46,7 @@ export const updateTestinomal = asyncHandler(async (req, res) => {
 export const createTestinomals = asyncHandler(async (req, res) => {
   const { name,message } = req.body;
 
-  const TestinomalExists = await Testinomal.findOne({ name }); // Changed variable name
-  if (TestinomalExists) {
-    res.status(400);
-    throw new Error("Testinomal already exists");
-  }
+
 
   const newTestinomal = await Testinomal.create({
   name,message
